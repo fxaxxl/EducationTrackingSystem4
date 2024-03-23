@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Education Tracking System</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="logo-container">
+            <img src="images/buidlogo.png" alt="BUiD Logo" class="buid-logo">
+            <p>BUiD</p>
+        </div>
+        <div class="dashboard-container">
+            <div class="navbar">
+                <button id="logoutButton" class="logout-btn">Logout</button>
+            </div>
+            <div class="tabs">
+                <button class="tab-link active" data-target="Home">Home</button>
+                <button class="tab-link" data-target="Courses">Courses</button>
+                <button class="tab-link" data-target="Assignments">Assignments</button>
+                <button class="tab-link" data-target="Grades">Grades</button>
+                <button class="tab-link" data-target="GPA">GPA Calculator</button>
+                <button class="tab-link" data-target="Visualization">Progress Visualization</button>
+                <button class="tab-link" data-target="Notifications">Notifications</button> 
+            </div>
+            <div id="Home" class="tab-content" style="display: block;">
+                <div class="grid-container">
+                    <!-- Academic Overview -->
+                    <div class="grid-item">
+                        <img src="images/AcademicOverview.jpg" alt="Academic Overview">
+                        <h3>Academic Overview</h3>
+                        <p>Review your coursework, current GPA, and upcoming evaluations at a glance.</p>
+                    </div>
+            
+                    <!-- Research Projects -->
+                    <div class="grid-item">
+                        <img src="images/ResearchProjects.jpg" alt="Research Projects">
+                        <h3>Research Projects</h3>
+                        <p>Track your ongoing research, experiments, and findings. Monitor deadlines for your thesis submissions.</p>
+                    </div>
+            
+                    <!-- Publication Tracker -->
+                    <div class="grid-item">
+                        <img src="images/PublicationTracker.jpg" alt="Publication Tracker">
+                        <h3>Publication Tracker</h3>
+                        <p>Keep tabs on your publications, citation counts, and journals of interest. Access tools for manuscript preparation.</p>
+                    </div>
+            
+                    <!-- Conference Alerts -->
+                    <div class="grid-item">
+                        <img src="images/ConferenceDeadlines.jpg" alt="Conference Deadlines">
+                        <h3>Conference Deadlines</h3>
+                        <p>Stay informed about upcoming conferences, submission deadlines, and registration dates.</p>
+                    </div>
+            
+                    <!-- Educational Resources -->
+                    <div class="grid-item">
+                        <img src="images/EducationalResources.jpg" alt="Educational Resources">
+                        <h3>Educational Resources</h3>
+                        <p>Access a curated list of resources, databases, and libraries for your research and studies.</p>
+                    </div>
+            
+                    <!-- Academic Recommendations -->
+                    <div class="grid-item">
+                        <img src="images/AcademicRecommendations.jpg" alt="Academic Recommendations">
+                        <h3>Academic Recommendations</h3>
+                        <p>Discover courses, workshops, and seminars recommended based on your research interests and academic profile.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/StudentWellbeing.png" alt="Student Wellbeing">
+                        <h3>Student Wellbeing</h3>
+                        <p>Supporting our students' health and wellness with resources and programs.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/InternationalOpportunities.png" alt="International Opportunities">
+                        <h3>International Opportunities</h3>
+                        <p>Explore global learning experiences and expand your horizons.</p>
+                    </div>
+                    <!-- New grid item for Student Engagement -->
+                    <div class="grid-item">
+                        <img src="images/StudentEngagement.png" alt="Student Engagement">
+                        <h3>Student Engagement</h3>
+                        <p>Get involved with university life through clubs, societies, and events.</p>
+                    </div>
+
+                    <!-- New grid item for Career Services -->
+                    <div class="grid-item">
+                        <img src="images/CareerServices.png" alt="Career Services">
+                        <h3>Career Services</h3>
+                        <p>Prepare for your future with our career counseling and job placement services.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="Courses" class="tab-content">
+                <h3>Your Courses</h3>
+            </div>
+
+            <div id="Assignments" class="tab-content">
+                <h3>Upcoming Assignments</h3>
+            </div>
+
+            <div id="Grades" class="tab-content">
+                <h3>Grade Overview</h3>
+                <canvas id="gradeChart"></canvas>
+            </div>
+
+            <div id="GPA" class="tab-content">
+                <h3>GPA Calculator</h3>
+                <div id="GPAValue"></div>
+            </div>
+            <div id="Notifications" class="tab-content">
+                <h3>Notifications</h3>
+            </div>
+            <div id="Visualization" class="tab-content">
+                <h3>Progress Visualization</h3>
+                <div class="visualization-tabs">
+                    <button class="visualization-tab-link" data-target="GradeDistribution">Grade Distribution</button>
+                    <button class="visualization-tab-link" data-target="AssignmentDeadlines">Assignment Deadlines</button>
+                </div>
+            
+                <div id="GradeDistribution" class="visualization-tab-content" style="display:none;">
+                    <h4>Grade Distribution</h4>
+                    <canvas id="gradeDistributionChart"></canvas>
+                </div>
+            
+                <div id="AssignmentDeadlines" class="visualization-tab-content" style="display:none;">
+                    <h4>Assignment Deadlines</h4>
+                    <canvas id="assignmentDeadlineChart"></canvas>
+                </div>
+            </div>
+        </div>        
+    </div> 
+    <script src="dashboard.js"></script>
+</body>
+</html>
